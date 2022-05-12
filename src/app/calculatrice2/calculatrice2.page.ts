@@ -31,25 +31,21 @@ export class Calculatrice2Page implements OnInit {
     } catch {
       this.operation = '';
     }
-
   }
 
   egale(): void {
-
     try {
       // eslint-disable-next-line no-eval
       this.operation = eval(this.operation);
     } catch {
       this.operation = ERROR;
     }
-
   }
 
   taper(n: any): void {
     if (this.operation === ERROR) {
       this.operation = '';
     }
-
     this.operation += n;
   }
 
