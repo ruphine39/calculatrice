@@ -1,48 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Calculatrice
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
 
+    <div class="ecran">
+       <P> {{operation}}</P>
+    </div>
+
     <div class="buttons-container">
+
       <div class="button-row">
-        <ion-button> 1 </ion-button>
-        <ion-button> 2 </ion-button>
-        <ion-button> 3 </ion-button>
-        <ion-button> + </ion-button>
-      </div>
-      <div class="button-row">
-        <ion-button> 4 </ion-button>
-        <ion-button> 5 </ion-button>
-        <ion-button> 6 </ion-button>
-        <ion-button> - </ion-button>
-      </div>
-      <div class="button-row">
-        <ion-button> 7 </ion-button>
-        <ion-button> 8 </ion-button>
-        <ion-button> 9 </ion-button>
-        <ion-button> x </ion-button>
+        <ion-button (click)="taper(1)"> 1 </ion-button>
+        <ion-button (click)="taper(2)"> 2 </ion-button>
+        <ion-button (click)="taper(3)"> 3 </ion-button>
+        <ion-button (click)="taper('+')"> + </ion-button>
       </div>
 
       <div class="button-row">
-        <ion-button> 1 </ion-button>
-        <ion-button> 2 </ion-button>
-        <ion-button> 3 </ion-button>
-        <ion-button> / </ion-button>
+        <ion-button (click)="taper(4)"> 4 </ion-button>
+        <ion-button (click)="taper(5)"> 5 </ion-button>
+        <ion-button (click)="taper(6)"> 6 </ion-button>
+        <ion-button (click)="taper('-')"> - </ion-button>
       </div>
       <div class="button-row">
-        <ion-button class="egale"> = </ion-button>
+        <ion-button (click)="taper(7)"> 7 </ion-button>
+        <ion-button (click)="taper(8)"> 8 </ion-button>
+        <ion-button (click)="taper(9)"> 9 </ion-button>
+        <ion-button (click)="taper('*')"> x </ion-button>
+      </div>
+
+      <div class="button-row">
+        <ion-button (click)="taper('.')"> . </ion-button>
+        <ion-button (click)="taper(0)"> 0 </ion-button>
+        <ion-button (click)="taper('/')"> / </ion-button>
+        <ion-button (click)="effacer1()"> <= </ion-button>
+      </div>
+
+      <div class="button-row">
+        <ion-button class="egale" (click)="egale()"> = </ion-button>
       </div>
 
     </div>
